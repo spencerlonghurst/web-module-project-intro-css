@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -57,60 +57,166 @@ table {
 
 
 * {
-    /* background: white; */
-    display: inline-block;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    max-width: 100%;
+    /* display: inline-block; */
+}
+
+
+/*General Styles*/
+
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    font-family: ;
-    color: black;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+    /* color: black; */
 }
 
-.nav {
+h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 6rem;
+}
+/* 
+.head h1 {
+    font-family: 'Chelsea Market';
+} */
+
+section {
+    padding: 4% 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*header section styles*/
+
+
+nav { 
+    padding: 2% 0;
+    /* margin: 1%; */
+    /* text-align: center; */
     /* color: white; */
+}
+
+nav a {
     display: inline-block;
-    /* border: 2px solid red; */
-}
-
-.box {
+    padding: 1% 0;
+    width: 10%;
+    text-align: center;
+    border-radius: 20%; /*Brit would use 10px here. px is OK for small stuff like this*/
     color: white;
-
+    text-decoration: none;
 }
 
-#plan {
-    /* border: 1px solid red; */
+/* 
+.box {
+    border-radius: 20%;
+    padding: 1%;
+    border-radius: 20%;
+} */
+
+.orange {
     background-color: #FF764E;
-    padding: 10%;
+    /* width: 10%; */
+    margin-left: 10%
 }
 
-#learn {
+.blue {
     background-color: #5ED3EB;
-    /* border: 1px solid red; */
-    padding: 10%;
+    margin: 0 24%;
+    /* width: 10%; */
 }
 
-#involved {
+.yellow {
     background-color: #FFCD69;
-    /* border: 1px solid red; */
-    padding: 10%;
-
+    /* width: 10%; */
+    margin-right: 10%;
 }
 
-#top {
-    
+
+/*Title Section*/
+.cta {
+    position: relative; /*Using this method because we can't use flexbox yet*/
 }
 
-#img {
-    height: 10%;
-    width: 20%;
-    border-radius: 50%
+.text, .image {
+    display: inline-block;
 }
 
-#info {
+.image {
+    /* height: 10%; */
+    width: 30%;
+    /* border-radius: 50%; */
+    /* margin-top: 5%; */
+    /* margin-left: 5%; */
+}
+
+.round { /*or you can use .image img*/
+    border-radius: 50%;
+}
+
+.text {
+    width: 55%;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 3;
+    position: absolute; /*Using this method because we can't use flexbox yet*/
+    top: 150px;
+}
+
+/* 
+.head {
+    text-align: center;
+} */
+
+
+
+.main {
     background-color: #DDB9A3;
     color: white;
+    /* text-align: center; */
+    /* margin: 2%; */
+    padding: 2%;
 }
 
-#bottom {
+.info div{
+    width: 30%;
+    margin: 5% auto;
+}
+
+
+.bolded {
+    font-weight: bold;
+}
+
+.big-img {
+    background-image: url('assets/footer_img.jpg');
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%
+}
+
+footer {
     background-color: #F9E7DC;
 }
+
+/* #bottomImg {
+    height: 20vh;
+    width: 100%;
+} */
+
+/* .mid {
+    text-align: center;
+    width: 100%;
+} */
+/* #bottom {
+    background-color: #F9E7DC;
+} */
